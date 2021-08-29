@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="text-center ">
+    <form method="POST" class="form-control_sm">
+        {% csrf_token %}
+        {{ form.username.label_tag }} <br>
+        {{ form.username }} <br> <br>
+
+        {{ form.password.label_tag }} <br>
+        {{ form.password }} <br> <br>
+
+        {{ form.non_field_errors }}
+        <input type="submit" class="btn btn-outline-dark" value="Submit">
+    </form>
+</div>
+{% endblock %}
+

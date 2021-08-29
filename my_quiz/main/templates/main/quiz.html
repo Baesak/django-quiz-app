@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Quizapp{% endblock %}
+
+{% block content %}
+<div class="module">
+    <form method="post">
+        {% csrf_token %}
+
+        <b> {{ questions.0.text }} </b> <br>
+        {{ form.answer1 }}
+
+        <b> {{ questions.1.text }} </b> <br>
+        {{ form.answer2 }}
+
+        <b> {{ questions.2.text }} </b> <br>
+        {{ form.answer3 }}
+
+        <input type="submit" class="btn btn-outline-dark text-center" value="Submit">
+    </form>
+</div>
+
+{% endblock %}

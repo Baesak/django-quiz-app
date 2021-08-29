@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}NewQuestion{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>New question</h1> <br>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.text }}<br>
+        {{ form.answr }}<br>
+        <button type="submit" class="btn btn-outline-dark">Submit</button>
+        <script src="{% static 'js/new_quest.js' %}"></script>
+        <button type="button" class="btn btn-outline-dark" onclick="RandomQuestion()">Random question</button> <br>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <br>
+            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}> {{ message }} </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    </form>
+
+</div>
+{% endblock %}

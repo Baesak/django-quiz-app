@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Results{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    {% if correct == 3 %}
+        <p> Congratulations! You have 3/3 correct answers! You passed the quiz! </p>
+    {% else %}
+        <p>You loose! You have {{ correct }}/3 answers.</p>
+    {% endif %}
+    <form action="{% url 'quiz' %}"  method="get">
+      <button class="btn btn-outline-dark">Try Again!</button> </br>
+    </form>
+</div>
+{% endblock %}
