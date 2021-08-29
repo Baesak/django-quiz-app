@@ -1,5 +1,4 @@
 # Django-Quiz-App
-![GitHub code size in bytes](https://img.shields.io/github/repo-size/Baesak/django-quiz-app)
 
 Simple quiz-app that was made on Django framework.
 # Screenshots:
